@@ -1,10 +1,11 @@
 import React, { Fragment, useState } from 'react';
-        
-        const AlbumScreen = () => {
-          return(
-            <Fragment>
-              <div>Album Screen</div>
-            </Fragment>
-          );
-        }
-        export default AlbumScreen;
+import NavbarFooter from '../../components/commom/navbar_footer';
+
+const AlbumScreen = () => {
+  return(
+    <Fragment>
+      <NavbarFooter/>
+    </Fragment>
+  );
+}
+export default AlbumScreen;

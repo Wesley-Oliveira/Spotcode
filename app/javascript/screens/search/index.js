@@ -1,10 +1,12 @@
 import React, { Fragment, useState } from 'react';
-        
-        const SearchScreen = () => {
-          return(
-            <Fragment>
-              <div>Search Screen</div>
-            </Fragment>
-          );
-        }
-        export default SearchScreen;
+import NavbarFooter from '../../components/commom/navbar_footer';
+
+const SearchScreen = () => {
+  return(
+    <Fragment>
+      <NavbarFooter/>
+    </Fragment>
+  );
+}
+
+export default SearchScreen;
