@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const DivVSpaced = styled.div`
     margin-top: 50px;
+    margin-bottom: 50px;
 `
 
 const Categories = (props) => {
