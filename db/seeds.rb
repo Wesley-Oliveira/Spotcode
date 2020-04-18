@@ -3,8 +3,7 @@
 #========================
  
 tmp_dir = Rails.root.join("tmp")
- 
- 
+
 rock = Category.create(name: "Rock")
 rock.image.attach(io: File.open("#{tmp_dir}/seed_files/rock.png"), filename: "rock.png")
  
@@ -16,8 +15,48 @@ country.image.attach(io: File.open("#{tmp_dir}/seed_files/country.png"), filenam
  
 jazz = Category.create(name: "Jazz")
 jazz.image.attach(io: File.open("#{tmp_dir}/seed_files/jazz.png"), filename: "jazz.png")
- 
- 
+
+
+#Linkin Park
+linkin_park = Artist.create(name: "Linkin Park")
+linkin_park.photo.attach(io: File.open("#{tmp_dir}/seed_files/linkin-park.jpg"), filename: "linkin-park.jpg") 
+
+meteora = linkin_park.albums.create(title: "Meteora", date: Time.strptime("25/03/2003", "%d/%m/%Y"), category: rock)
+meteora.cover.attach(io: File.open("#{tmp_dir}/seed_files/linkinpark_meteora.jpg"), filename: "linkinpark_meteora.jpg")
+numb = meteora.songs.create(title: "Numb", played_count: Random.rand(1000))
+numb.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/meteora/numb.mp3"), filename: "numb.mp3")
+somewhere_i_belong = meteora.songs.create(title: "Somewhere I Belong", played_count: Random.rand(1000))
+somewhere_i_belong.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/meteora/somewhere_i_belong.mp3"), filename: "somewhere_i_belong.mp3")
+lying_from_you = meteora.songs.create(title: "Lying From You", played_count: Random.rand(1000))
+lying_from_you.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/meteora/lying_from_you.mp3"), filename: "lying_from_you.mp3")
+from_the_inside = meteora.songs.create(title: "From The Inside", played_count: Random.rand(1000))
+from_the_inside.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/meteora/from_the_inside.mp3"), filename: "from_the_inside.mp3")
+faint = meteora.songs.create(title: "Faint", played_count: Random.rand(1000))
+faint.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/meteora/faint.mp3"), filename: "faint.mp3")
+breaking_the_habit = meteora.songs.create(title: "Breaking The Habit", played_count: Random.rand(1000))
+breaking_the_habit.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/meteora/breaking_the_habit.mp3"), filename: "breaking_the_habit.mp3")
+
+hybridtheory = linkin_park.albums.create(title: "Hybrid Theory", date: Time.strptime("24/10/2000", "%d/%m/%Y"), category: rock)
+hybridtheory.cover.attach(io: File.open("#{tmp_dir}/seed_files/linkinpark_hybridtheory.jpg"), filename: "linkinpark_hybridtheory.jpg")
+a_place_for_my_head = hybridtheory.songs.create(title: "A Place for My Head", played_count: Random.rand(1000))
+a_place_for_my_head.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/hybridtheory/a_place_for_my_head.mp3"), filename: "a_place_for_my_head.mp3")
+crawling = hybridtheory.songs.create(title: "Crawling", played_count: Random.rand(1000))
+crawling.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/hybridtheory/crawling.mp3"), filename: "crawling.mp3")
+in_the_end = hybridtheory.songs.create(title: "In The End", played_count: Random.rand(1000))
+in_the_end.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/hybridtheory/in_the_end.mp3"), filename: "in_the_end.mp3")
+one_step_closer = hybridtheory.songs.create(title: "One Step Closer", played_count: Random.rand(1000))
+one_step_closer.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/hybridtheory/one_step_closer.mp3"), filename: "one_step_closer.mp3")
+papercut = hybridtheory.songs.create(title: "Papercut", played_count: Random.rand(1000))
+papercut.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/hybridtheory/papercut.mp3"), filename: "papercut.mp3")
+points_of_authority = hybridtheory.songs.create(title: "Points Of Authority", played_count: Random.rand(1000))
+points_of_authority.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/hybridtheory/points_of_authority.mp3"), filename: "points_of_authority.mp3")
+pushing_me_away = hybridtheory.songs.create(title: "Pushing Me Away", played_count: Random.rand(1000))
+pushing_me_away.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/hybridtheory/pushing_me_away.mp3"), filename: "pushing_me_away.mp3")
+runaway = hybridtheory.songs.create(title: "Runaway", played_count: Random.rand(1000))
+runaway.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/hybridtheory/runaway.mp3"), filename: "runaway.mp3")
+with_you = hybridtheory.songs.create(title: "With You", played_count: Random.rand(1000))
+with_you.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/hybridtheory/with_you.mp3"), filename: "with_you.mp3")
+
 # ANDREW HOWS
  
 andrew_howes = Artist.create(name: "Andrew Howes")
