@@ -5,7 +5,7 @@ import { Button, Columns } from 'react-bulma-components';
 import RecentlyHeardsService from '../../services/recently_heards';
 
 const PlaySequenceButton = styled(Button)`
- margin-bottom: 30px;
+  margin-bottom: 30px;
 `
 
 const Musics = (props) => {
