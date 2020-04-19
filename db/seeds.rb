@@ -38,6 +38,7 @@ breaking_the_habit.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/meteo
 
 hybridtheory = linkin_park.albums.create(title: "Hybrid Theory", date: Time.strptime("24/10/2000", "%d/%m/%Y"), category: rock)
 hybridtheory.cover.attach(io: File.open("#{tmp_dir}/seed_files/linkinpark_hybridtheory.jpg"), filename: "linkinpark_hybridtheory.jpg")
+
 a_place_for_my_head = hybridtheory.songs.create(title: "A Place for My Head", played_count: Random.rand(1000))
 a_place_for_my_head.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/hybridtheory/a_place_for_my_head.mp3"), filename: "a_place_for_my_head.mp3")
 crawling = hybridtheory.songs.create(title: "Crawling", played_count: Random.rand(1000))
